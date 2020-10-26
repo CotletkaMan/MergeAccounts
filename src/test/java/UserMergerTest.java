@@ -48,10 +48,7 @@ public class UserMergerTest {
 
     @Test
     public void twoSeparateRowTest () {
-        List<Pair<String, Collection<String>>> input = Arrays.asList(
-                new Pair<>("user1", Arrays.asList("xxx@ya.ru", "foo@gmail.com", "lol@mail.ru")),
-                new Pair<>("user3", Arrays.asList("xyz@pisem.net", "vasya@pupkin.com"))
-        );
+        List<Pair<String, Collection<String>>> input = Arrays.asList(user1, user3);
         List<Pair<String, Collection<String>>> result = UserMerger.mergeUsers(input);
 
         Assertions.assertEquals(input, result, "algorithm breaks unique case !!");
